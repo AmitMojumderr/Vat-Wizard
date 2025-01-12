@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAT Wizard </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>VAT Wizard</h1>
+        <div class="carousel">
+            <div class="carousel-item active">Welcome to the VAT Wizard</div>
+            <div class="carousel-item">Easily calculate VAT and base amounts</div>
+            <div class="carousel-item">Designed for accuracy and simplicity</div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="calculator">
+            <h2>Calculate VAT</h2>
+            <form id="vatForm">
+                <label for="totalAmount">Total Amount (Including VAT):</label>
+                <input type="number" id="totalAmount" step="0.01" required>
+
+                <label for="vatRate">VAT Rate (%):</label>
+                <input type="number" id="vatRate" step="0.01" required>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" step="1" required>
+
+                <button type="button" onclick="calculateVAT()">Calculate</button>
+            </form>
+
+            <div class="results">
+                <h3>Results</h3>
+                <p><strong>VAT Amount:</strong> <span id="vatAmount">0.00</span></p>
+                <p><strong>Base Amount (Excluding VAT):</strong> <span id="baseAmount">0.00</span></p>
+                <p><strong>Unit Price (Excluding VAT):</strong> <span id="unitPrice">0.00</span></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 VAT Wizard Inc. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="https://dreamhackit.netlify.app/">DreamHack IT</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
